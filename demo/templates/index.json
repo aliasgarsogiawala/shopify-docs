@@ -267,13 +267,45 @@
           "settings": {
             "image": "shopify://shop_images/flatlay-mixed.jpg"
           }
+        },
+        "p-7": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/feed-blood-drive.jpg",
+            "caption": "Windows down, blood orange"
+          }
+        },
+        "p-8": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/feed-yuzu-gym.jpg",
+            "caption": "Last set, first sip"
+          }
+        },
+        "p-9": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/feed-yuzu-sip.jpg",
+            "caption": "Yuzu lime between sets"
+          }
         }
       },
       "settings": {
         "handle": "@tangelosoda",
         "heading": "From our feed",
         "text": "<p>New flavors, recipes and the odd look behind the scenes, every week.</p>"
-      }
+      },
+      "block_order": [
+        "p-7",
+        "p-1",
+        "p-2",
+        "p-8",
+        "p-3",
+        "p-4",
+        "p-9",
+        "p-5",
+        "p-6"
+      ]
     },
     "signup": {
       "settings": {

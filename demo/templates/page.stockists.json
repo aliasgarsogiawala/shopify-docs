@@ -4,13 +4,14 @@
       "blocks": {
         "slide": {
           "settings": {
-            "image": "shopify://shop_images/flatlay-wild-blueberry.jpg",
-            "text": "<p>Grab a cold can at these shops, cafés and markets, or get a case delivered.</p>"
+            "image": "shopify://shop_images/banner-study-night.jpg",
+            "text": "<p>Grab a cold can at these shops, cafés and markets, or get a case delivered.</p>",
+            "image_mobile": "shopify://shop_images/banner-study-night-mobile.jpg"
           }
         }
       },
       "settings": {
-        "overlay": 50
+        "overlay": 20
       }
     },
     "trade": {

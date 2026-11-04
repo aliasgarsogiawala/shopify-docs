@@ -103,28 +103,27 @@
         "a": {
           "settings": {
             "product": "blood-orange",
-            "x": 34,
-            "y": 78
+            "x": 47,
+            "y": 62
           }
         },
         "b": {
           "settings": {
-            "product": "pink-grapefruit",
-            "x": 62,
-            "y": 55
+            "product": "wild-blueberry",
+            "x": 55,
+            "y": 47
           }
         },
         "c": {
           "settings": {
-            "product": "wild-blueberry",
-            "x": 82,
-            "y": 40,
-            "text": "<p>From the same growers every year.</p>"
+            "product": "black-cherry",
+            "x": 64,
+            "y": 61
           }
         }
       },
       "settings": {
-        "image": "shopify://shop_images/flatlay-mixed.jpg",
+        "image": "shopify://shop_images/table-friends.jpg",
         "text": "<p>Everything on our table, one tap away.</p>"
       }
     },

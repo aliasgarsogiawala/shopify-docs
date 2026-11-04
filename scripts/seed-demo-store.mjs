@@ -53,6 +53,25 @@ const log = (...a) => console.log(...a);
 
 const MIME = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.mp4': 'video/mp4' };
 
+// Alt text for the lifestyle photos, read by screen readers wherever the theme shows them. Cut-outs and decor stay without.
+const FILE_ALT = {
+  'banner-study-night.jpg': 'A woman writing in a notebook at a desk at night, a can of Tangelo Yuzu Lime beside her',
+  'banner-study-night-mobile.jpg': 'A woman writing in a notebook at a desk at night, a can of Tangelo Yuzu Lime beside her',
+  'feed-blood-drive.jpg': "A man in sunglasses holding up a can of Tangelo Blood Orange in the driver's seat",
+  'feed-yuzu-gym.jpg': 'A man with a towel around his neck holding a can of Tangelo Yuzu Lime at the gym',
+  'feed-yuzu-sip.jpg': 'A woman drinking a can of Tangelo Yuzu Lime at the gym',
+  'flatlay-blood-orange.jpg': 'Two cans of Tangelo Blood Orange among blood orange slices',
+  'flatlay-yuzu-lime.jpg': 'Two cans of Tangelo Yuzu Lime among limes',
+  'flatlay-black-cherry.jpg': 'Two cans of Tangelo Black Cherry among cherries',
+  'flatlay-pink-grapefruit.jpg': 'A can of Tangelo Pink Grapefruit with grapefruit halves',
+  'flatlay-wild-blueberry.jpg': 'Two cans of Tangelo Wild Blueberry among blueberries',
+  'flatlay-mixed.jpg': 'All five Tangelo flavors lined up with limes and grapefruit slices',
+  'table-friends.jpg': 'Three friends toasting with cans of Tangelo Blood Orange, Wild Blueberry and Black Cherry outdoors at night',
+  'story-grove.jpg': 'Blood oranges, grapefruit and limes, whole and halved',
+  'story-press.jpg': 'Grapefruit and blood orange halves',
+  'story-can.jpg': 'Rows of Tangelo cans in every flavor',
+};
+
 async function existingFiles() {
   const byName = {};
   let after = null;
@@ -64,6 +83,7 @@ async function existingFiles() {
           nodes {
             id
             fileStatus
+            alt
             ... on MediaImage { image { url } }
             ... on Video { filename sources { url } }
           }
@@ -74,11 +94,27 @@ async function existingFiles() {
     for (const n of d.files.nodes) {
       const url = n.image?.url || n.sources?.[0]?.url || '';
       const name = n.filename || decodeURIComponent(url.split('?')[0].split('/').pop() || '');
-      if (name) byName[name] = { id: n.id, url, status: n.fileStatus };
+      if (name) byName[name] = { id: n.id, url, status: n.fileStatus, alt: n.alt || '' };
     }
     after = d.files.pageInfo.hasNextPage ? d.files.pageInfo.endCursor : null;
   } while (after);
   return byName;
+}
+
+/* Brings the alt text of files already in the store up to date with FILE_ALT. */
+async function updateAlts(have) {
+  const todo = Object.entries(FILE_ALT).filter(([name, alt]) => have[name] && have[name].alt !== alt);
+  if (!todo.length) return;
+  log(`files: updating alt text on ${todo.length}`);
+  check(
+    'fileUpdate',
+    gql(
+      `mutation Alt($files: [FileUpdateInput!]!) {
+        fileUpdate(files: $files) { files { id } userErrors { field message } }
+      }`,
+      { files: todo.map(([name, alt]) => ({ id: have[name].id, alt })) }
+    ).fileUpdate
+  );
 }
 
 const skipped = new Set();
@@ -146,7 +182,7 @@ async function uploadFiles(paths) {
         `mutation Files($files: [FileCreateInput!]!) {
           fileCreate(files: $files) { files { id } userErrors { field message } }
         }`,
-        { files: batch.map(({ p, i }) => ({ originalSource: stagedTargets[i].resourceUrl, contentType: kind, filename: path.basename(p) })) }
+        { files: batch.map(({ p, i }) => ({ originalSource: stagedTargets[i].resourceUrl, contentType: kind, filename: path.basename(p), alt: FILE_ALT[path.basename(p)] || '' })) }
       ).fileCreate;
       if (kind === 'VIDEO' && d.userErrors.some((e) => /trial/i.test(e.message))) {
         log(`files: skipped ${batch.length} video(s), trial stores can't host video (${d.userErrors[0].message})`);
@@ -160,7 +196,10 @@ async function uploadFiles(paths) {
   for (let tries = 0; tries < 40; tries++) {
     const now = await existingFiles();
     const pending = paths.filter((p) => !skipped.has(p) && now[path.basename(p)]?.status !== 'READY');
-    if (!pending.length) return now;
+    if (!pending.length) {
+      await updateAlts(now);
+      return now;
+    }
     if (pending.some((p) => now[path.basename(p)]?.status === 'FAILED')) throw new Error(`file processing failed: ${pending.join(', ')}`);
     log(`files: waiting for ${pending.length} to finish processing`);
     await sleep(5000);
