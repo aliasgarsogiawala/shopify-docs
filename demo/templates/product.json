@@ -1,0 +1,121 @@
+{
+  "sections": {
+    "main": {
+      "blocks": {
+        "buy": {
+          "settings": {
+            "note": "Free shipping on full cases"
+          }
+        },
+        "benefits": {
+          "settings": {
+            "text_1": "5g prebiotic fiber",
+            "text_2": "Pressed fruit juice",
+            "text_3": "Endlessly recyclable can"
+          }
+        },
+        "nutrition": {
+          "settings": {
+            "facts": "Calories: 35\nTotal sugar: 5g\nFiber: 5g\nSodium: 10mg\nCaffeine: 0mg"
+          }
+        },
+        "shipping": {
+          "settings": {
+            "content": "<p>Orders ship in 2 to 4 working days. Full cases ship free. Damaged in transit? Send us a photo and we'll replace it.</p>"
+          }
+        }
+      }
+    },
+    "claims": {
+      "blocks": {
+        "mq-1": {
+          "settings": {
+            "text": "5g cane sugar"
+          }
+        },
+        "mq-2": {
+          "settings": {
+            "text": "Prebiotic fiber"
+          }
+        },
+        "mq-3": {
+          "settings": {
+            "text": "Pressed fruit"
+          }
+        },
+        "mq-4": {
+          "settings": {
+            "text": "35 calories"
+          }
+        }
+      }
+    },
+    "facts": {
+      "settings": {
+        "heading": "Per can",
+        "footnote": "Compared with the average full-sugar cola, 330 ml.",
+        "serving": "One 330 ml can"
+      },
+      "blocks": {
+        "fa-cal": {
+          "settings": {
+            "value": "35"
+          }
+        },
+        "fa-sugar": {
+          "settings": {
+            "value": "5g",
+            "label": "Cane sugar"
+          }
+        },
+        "fa-fibre": {
+          "settings": {
+            "value": "5g",
+            "label": "Prebiotic fiber"
+          }
+        },
+        "fa-juice": {
+          "settings": {
+            "value": "12%",
+            "label": "Pressed juice"
+          }
+        }
+      }
+    },
+    "benefits": {
+      "settings": {
+        "heading": "What's in it, and what isn't"
+      },
+      "blocks": {
+        "plant": {
+          "settings": {
+            "icon": "leaf",
+            "title": "Plant based",
+            "text": "<p>Nothing from animals, start to finish.</p>"
+          }
+        },
+        "gluten": {
+          "settings": {
+            "icon": "wheat",
+            "title": "Gluten free",
+            "text": "<p>Made in a kitchen without wheat.</p>"
+          }
+        },
+        "sugar": {
+          "settings": {
+            "icon": "drop",
+            "title": "Low sugar",
+            "text": "<p>Sweetened lightly, never artificially.</p>"
+          }
+        },
+        "recycle": {
+          "settings": {
+            "icon": "recycle",
+            "title": "Recyclable",
+            "text": "<p>Packed in materials you can recycle at home.</p>"
+          }
+        }
+      }
+    }
+  }
+}

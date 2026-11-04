@@ -1,0 +1,14 @@
+{
+  "current": {
+    "social_instagram": "https://instagram.com/shopify",
+    "social_tiktok": "https://tiktok.com/@shopify",
+    "sections": {
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "upsell_heading": "Make it a mixed case"
+        }
+      }
+    }
+  }
+}

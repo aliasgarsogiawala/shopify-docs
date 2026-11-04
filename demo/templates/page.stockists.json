@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "banner": {
+      "blocks": {
+        "slide": {
+          "settings": {
+            "image": "shopify://shop_images/story-grove.jpg",
+            "text": "<p>Grab a cold can at these shops, cafés and markets, or get a case delivered.</p>"
+          }
+        }
+      }
+    },
+    "trade": {
+      "blocks": {
+        "h": {
+          "settings": {
+            "heading": "Want to stock Tangelo?"
+          }
+        },
+        "t": {
+          "settings": {
+            "text": "<p>We work with independent shops, cafés and restaurants. Tell us a little about your place and we'll send prices and samples.</p>"
+          }
+        }
+      }
+    },
+    "list": {
+      "settings": {
+        "text": "<p>Grab a cold one at these shops, cafés and markets.</p>"
+      },
+      "blocks": {
+        "a": {
+          "settings": {
+            "name": "Corner Grocery",
+            "address": "12 Market Street\nSpringfield",
+            "region": "Springfield",
+            "hours": "Mon to Sat, 8am to 8pm"
+          }
+        },
+        "b": {
+          "settings": {
+            "name": "Harbor Deli",
+            "address": "4 Quay Road\nPort Ellen",
+            "region": "Port Ellen",
+            "hours": "Every day, 7am to 4pm"
+          }
+        },
+        "c": {
+          "settings": {
+            "name": "Fresh Fields Market",
+            "address": "88 High Street\nPort Ellen",
+            "region": "Port Ellen",
+            "hours": "Every day, 9am to 9pm"
+          }
+        },
+        "d": {
+          "settings": {
+            "name": "The Pantry",
+            "address": "2 Mill Lane\nBridgend",
+            "hours": "Tue to Sun, 10am to 6pm"
+          }
+        }
+      }
+    }
+  }
+}

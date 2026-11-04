@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "header": {
+      "settings": {
+        "mega_fallback": "shopify://shop_images/flatlay-mixed.jpg"
+      }
+    },
+    "announcement": {
+      "blocks": {
+        "msg-1": {
+          "settings": {
+            "text": "Free shipping on mixed cases over $40"
+          }
+        },
+        "msg-2": {
+          "settings": {
+            "text": "New: Black Cherry is back for summer"
+          }
+        },
+        "msg-3": {
+          "settings": {
+            "text": "Subscribe and save 15% on every case"
+          }
+        }
+      }
+    }
+  }
+}

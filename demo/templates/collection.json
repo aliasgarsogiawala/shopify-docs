@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "signup": {
+      "settings": {
+        "image": "shopify://shop_images/can-black-cherry.png",
+        "heading": "10% off your first case",
+        "text": "<p>Get new flavors before anyone else, plus recipes and the odd discount.</p>",
+        "button_label": "Send my code",
+        "fine_print": "One email a month. Unsubscribe whenever you like."
+      }
+    },
+    "main": {
+      "blocks": {
+        "promo": {
+          "settings": {
+            "heading": "Build your own case",
+            "text": "<p>Pick any 12 cans and save 15% on the lot.</p>",
+            "button_label": "Start a case"
+          }
+        }
+      }
+    }
+  }
+}

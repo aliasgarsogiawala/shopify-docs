@@ -1,0 +1,414 @@
+{
+  "sections": {
+    "hero": {
+      "blocks": {
+        "slide-blood": {
+          "settings": {
+            "product": "blood-orange",
+            "decor_1": "shopify://shop_images/decor-blood-1.png",
+            "decor_2": "shopify://shop_images/decor-blood-2.png",
+            "decor_3": "shopify://shop_images/decor-ice-1.png",
+            "decor_4": "shopify://shop_images/decor-ice-2.png",
+            "image": "shopify://shop_images/can-blood-orange.png",
+            "text": "Sicilian blood orange, a pinch of ginger and 5g of cane sugar. That's the whole list.",
+            "button_label": "Shop Blood Orange",
+            "button2_label": "Build a mixed case"
+          }
+        },
+        "slide-yuzu": {
+          "settings": {
+            "product": "yuzu-lime",
+            "decor_1": "shopify://shop_images/decor-lime-1.png",
+            "decor_2": "shopify://shop_images/decor-lime-2.png",
+            "decor_3": "shopify://shop_images/decor-ice-2.png",
+            "decor_4": "shopify://shop_images/decor-ice-1.png",
+            "image": "shopify://shop_images/can-yuzu-lime.png",
+            "text": "Bright yuzu and Persian lime with a dry, bitter finish. Best with ice and a long afternoon.",
+            "button_label": "Shop Yuzu Lime"
+          }
+        },
+        "slide-cherry": {
+          "settings": {
+            "product": "black-cherry",
+            "decor_1": "shopify://shop_images/decor-cherries.png",
+            "decor_2": "shopify://shop_images/decor-cherry.png",
+            "decor_3": "shopify://shop_images/decor-ice-1.png",
+            "decor_4": "shopify://shop_images/decor-ice-2.png",
+            "image": "shopify://shop_images/can-black-cherry.png",
+            "text": "Dark cherries and a little vanilla, with enough fizz to keep it light.",
+            "button_label": "Shop Black Cherry"
+          }
+        },
+        "slide-grapefruit": {
+          "settings": {
+            "product": "pink-grapefruit",
+            "decor_1": "shopify://shop_images/decor-grapefruit-1.png",
+            "decor_2": "shopify://shop_images/decor-grapefruit-2.png",
+            "decor_3": "shopify://shop_images/decor-ice-2.png",
+            "decor_4": "shopify://shop_images/decor-ice-1.png",
+            "image": "shopify://shop_images/can-pink-grapefruit.png",
+            "text": "Ruby grapefruit and a pinch of sea salt. Tart first, then clean.",
+            "button_label": "Shop Pink Grapefruit"
+          }
+        },
+        "slide-blueberry": {
+          "settings": {
+            "product": "wild-blueberry",
+            "decor_1": "shopify://shop_images/decor-blueberries.png",
+            "decor_2": "shopify://shop_images/decor-blueberry.png",
+            "decor_3": "shopify://shop_images/decor-ice-1.png",
+            "decor_4": "shopify://shop_images/decor-ice-2.png",
+            "image": "shopify://shop_images/can-wild-blueberry.png",
+            "text": "Wild blueberries and lemon peel, pressed and canned in the same week.",
+            "button_label": "Shop Wild Blueberry"
+          }
+        }
+      }
+    },
+    "lineup": {
+      "settings": {
+        "collection": "sodas",
+        "text": "<p>Five sodas made with pressed fruit and a dose of prebiotic fiber.</p>"
+      }
+    },
+    "pack": {
+      "settings": {
+        "collection": "singles",
+        "discount_note": "Full cases ship free and save 15% at checkout."
+      }
+    },
+    "moods": {
+      "blocks": {
+        "cl-citrus": {
+          "settings": {
+            "collection": "citrus"
+          }
+        },
+        "cl-berry": {
+          "settings": {
+            "collection": "berry"
+          }
+        },
+        "cl-cases": {
+          "settings": {
+            "collection": "bundles"
+          }
+        },
+        "cl-all": {
+          "settings": {
+            "collection": "all"
+          }
+        }
+      }
+    },
+    "ingredients": {
+      "settings": {
+        "image": "shopify://shop_images/can-yuzu-lime.png",
+        "text": "<p>Four ingredients you can pronounce, plus bubbles.</p>"
+      },
+      "blocks": {
+        "co-fruit": {
+          "settings": {
+            "text": "About 12% real juice, never from concentrate."
+          }
+        },
+        "co-fibre": {
+          "settings": {
+            "text": "5g of prebiotic fiber in every can."
+          }
+        },
+        "co-sugar": {
+          "settings": {
+            "text": "Just 5g. A regular cola has seven times that."
+          }
+        },
+        "co-acv": {
+          "settings": {
+            "text": "Raw and unfiltered, for a tart edge."
+          }
+        }
+      }
+    },
+    "story": {
+      "blocks": {
+        "ch-grove": {
+          "settings": {
+            "image": "shopify://shop_images/story-grove.jpg",
+            "kicker": "Etna, Sicily",
+            "text": "<p>Our blood oranges come from three family groves on the slopes of Etna. They are picked in the six weeks of the year when the fruit is at its reddest.</p>"
+          }
+        },
+        "ch-press": {
+          "settings": {
+            "image": "shopify://shop_images/story-press.jpg",
+            "kicker": "Within 24 hours",
+            "heading": "Pressed, never concentrated",
+            "text": "<p>Fruit is cold-pressed the day it arrives and goes straight into the tank. No concentrate and no flavorings to fill the gaps.</p>"
+          }
+        },
+        "ch-can": {
+          "settings": {
+            "image": "shopify://shop_images/story-can.jpg",
+            "kicker": "4,000 cans a run",
+            "heading": "Canned in small batches",
+            "text": "<p>Small runs keep every batch tasting like the last. The cans are aluminum, which recycles forever without losing quality.</p>"
+          }
+        }
+      }
+    },
+    "compare": {
+      "settings": {
+        "us_image": "shopify://shop_images/can-blood-orange.png",
+        "us_label": "Tangelo",
+        "text": "<p>The same fizz with a fraction of the sugar, and something good for your gut.</p>",
+        "them_label": "Regular soda",
+        "button_label": "Try a mixed case"
+      },
+      "blocks": {
+        "row-sugar": {
+          "settings": {
+            "feature": "Sugar per can",
+            "us": "5g",
+            "them": "35g"
+          }
+        },
+        "row-fibre": {
+          "settings": {
+            "feature": "Prebiotic fiber"
+          }
+        },
+        "row-juice": {
+          "settings": {
+            "feature": "Real fruit juice"
+          }
+        },
+        "row-sweet": {
+          "settings": {
+            "feature": "Artificial sweeteners",
+            "us": "no",
+            "them": "Often"
+          }
+        },
+        "row-cal": {
+          "settings": {
+            "feature": "Calories",
+            "us": "35",
+            "them": "140"
+          }
+        }
+      }
+    },
+    "faq": {
+      "settings": {
+        "image": "shopify://shop_images/flatlay-yuzu-lime.jpg",
+        "text": "<p>Can't find yours? We reply within a working day.</p>"
+      },
+      "blocks": {
+        "f-sugar": {
+          "settings": {
+            "question": "How much sugar is in a can?",
+            "answer": "<p>5g of cane sugar per 330 ml can. The rest of the sweetness comes from the fruit itself. A regular cola has around 35g.</p>"
+          }
+        },
+        "f-prebiotic": {
+          "settings": {
+            "question": "What does prebiotic mean?",
+            "answer": "<p>Prebiotics are fibers that feed the good bacteria already living in your gut. Each can has 5g of chicory root fiber, about a fifth of what most adults should eat in a day.</p>"
+          }
+        },
+        "f-ship": {
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "<p>We ship across the US in 2 to 4 working days. Full cases ship free.</p>"
+          }
+        },
+        "f-sub": {
+          "settings": {
+            "question": "How does the subscription work?",
+            "answer": "<p>Choose a case and how often you want it. You save 15% on every delivery and can skip, swap flavors or cancel from your account at any time.</p>"
+          }
+        },
+        "f-cans": {
+          "settings": {
+            "question": "Are the cans recyclable?",
+            "answer": "<p>Yes. Aluminum can be recycled endlessly, and most cans are back on a shelf within two months.</p>"
+          }
+        }
+      }
+    },
+    "social": {
+      "blocks": {
+        "p-1": {
+          "settings": {
+            "image": "shopify://shop_images/flatlay-blood-orange.jpg"
+          }
+        },
+        "p-2": {
+          "settings": {
+            "image": "shopify://shop_images/flatlay-yuzu-lime.jpg"
+          }
+        },
+        "p-3": {
+          "settings": {
+            "image": "shopify://shop_images/flatlay-black-cherry.jpg"
+          }
+        },
+        "p-4": {
+          "settings": {
+            "image": "shopify://shop_images/flatlay-pink-grapefruit.jpg"
+          }
+        },
+        "p-5": {
+          "settings": {
+            "image": "shopify://shop_images/flatlay-wild-blueberry.jpg"
+          }
+        },
+        "p-6": {
+          "settings": {
+            "image": "shopify://shop_images/flatlay-mixed.jpg"
+          }
+        }
+      },
+      "settings": {
+        "handle": "@tangelosoda"
+      }
+    },
+    "signup": {
+      "settings": {
+        "image": "shopify://shop_images/can-pink-grapefruit.png",
+        "heading": "10% off your first case",
+        "text": "<p>Get new flavors before anyone else, plus recipes and the odd discount.</p>",
+        "button_label": "Send my code",
+        "fine_print": "One email a month. Unsubscribe whenever you like."
+      }
+    },
+    "drop": {
+      "settings": {
+        "kicker": "Back for summer",
+        "button_label": "Shop the drop",
+        "heading": "Black Cherry won't last",
+        "text": "<p>One harvest, one batch. When these cans are gone, Black Cherry is off the menu until next year.</p>",
+        "product": "black-cherry",
+        "button_link": "shopify://products/black-cherry",
+        "done_text": "This one's sold out until next year."
+      }
+    },
+    "finder": {
+      "blocks": {
+        "time": {
+          "settings": {
+            "product_1": "yuzu-lime",
+            "product_2": "blood-orange",
+            "product_3": "black-cherry"
+          }
+        },
+        "taste": {
+          "settings": {
+            "product_1": "wild-blueberry",
+            "product_2": "yuzu-lime",
+            "product_3": "black-cherry"
+          }
+        },
+        "where": {
+          "settings": {
+            "product_1": "pink-grapefruit",
+            "product_2": "blood-orange",
+            "product_3": "wild-blueberry",
+            "product_4": "pink-grapefruit"
+          }
+        }
+      },
+      "settings": {
+        "kicker": "Thirty-second quiz",
+        "heading": "Which Tangelo are you?",
+        "text": "<p>Three questions, one can. We'll match you to the flavor you'll keep coming back to.</p>",
+        "image": "shopify://shop_images/pack-mixed-case.png"
+      }
+    },
+    "subscribe": {
+      "settings": {
+        "badge": "Save 15% on every case",
+        "heading": "Never run dry",
+        "text": "<p>Pick your flavors and how often they turn up. Skip a month whenever the fridge is full.</p>",
+        "perks": "Skip, pause or cancel anytime\nFree shipping on every case\nSwap flavors whenever you like",
+        "button_link": "shopify://collections/bundles"
+      },
+      "blocks": {
+        "pick": {
+          "settings": {
+            "text": "<p>Build a box of the things you reach for most.</p>"
+          }
+        },
+        "often": {
+          "settings": {
+            "text": "<p>Every two, four or eight weeks. Change it whenever you like.</p>"
+          }
+        },
+        "door": {
+          "settings": {
+            "text": "<p>Delivered free, at the subscriber price, every time.</p>"
+          }
+        }
+      }
+    },
+    "claims": {
+      "blocks": {
+        "mq-1": {
+          "settings": {
+            "text": "5g cane sugar"
+          }
+        },
+        "mq-2": {
+          "settings": {
+            "text": "Prebiotic fiber"
+          }
+        },
+        "mq-3": {
+          "settings": {
+            "text": "Pressed fruit"
+          }
+        },
+        "mq-4": {
+          "settings": {
+            "text": "35 calories"
+          }
+        }
+      }
+    },
+    "reviews": {
+      "settings": {
+        "summary": "4.8 out of 5 from 2,140 reviews"
+      },
+      "blocks": {
+        "q-1": {
+          "settings": {
+            "quote": "Tastes like an actual orange. My three o'clock cola habit is gone.",
+            "author": "Priya S.",
+            "detail": "Monthly case since 2024"
+          }
+        },
+        "q-2": {
+          "settings": {
+            "quote": "The yuzu one is far too drinkable. I hide it at the back of the fridge.",
+            "author": "Marcus T.",
+            "detail": "Verified buyer"
+          }
+        },
+        "q-3": {
+          "settings": {
+            "quote": "Black Cherry with a splash of bourbon. You're welcome.",
+            "author": "Hannah L.",
+            "detail": "Verified buyer"
+          }
+        },
+        "q-4": {
+          "settings": {
+            "quote": "A soda my kids and I both like, and nobody has a sugar crash after.",
+            "author": "Dev R.",
+            "detail": "Mixed case subscriber"
+          }
+        }
+      }
+    }
+  }
+}

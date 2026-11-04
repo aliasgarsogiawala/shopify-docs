@@ -1,0 +1,146 @@
+{
+  "sections": {
+    "journal": {
+      "settings": {
+        "blog": "journal"
+      }
+    },
+    "intro": {
+      "settings": {
+        "image": "shopify://shop_images/story-grove.jpg",
+        "image_2": "shopify://shop_images/flatlay-pink-grapefruit.jpg"
+      },
+      "blocks": {
+        "t": {
+          "settings": {
+            "text": "<p>Tangelo started in a shared kitchen in 2021 with a juicer, a carbonation rig and a long list of things we didn't want in a can. Four years later the list of things we do put in is still short.</p>"
+          }
+        },
+        "h": {
+          "settings": {
+            "heading": "We wanted a soda we'd let our kids drink"
+          }
+        },
+        "c": {
+          "settings": {
+            "items": "Pressed fruit, never concentrate\nNo artificial sweeteners\nCertified B Corp since 2024"
+          }
+        }
+      }
+    },
+    "promos": {
+      "blocks": {
+        "t-1": {
+          "settings": {
+            "image": "shopify://shop_images/pack-mixed-case.png",
+            "label": "Best seller",
+            "heading": "The mixed case",
+            "text": "Twelve cans, all five flavors."
+          }
+        },
+        "t-2": {
+          "settings": {
+            "image": "shopify://shop_images/story-can.jpg",
+            "heading": "Subscribe and save 15%",
+            "text": "Skip, swap or cancel any time."
+          }
+        },
+        "t-3": {
+          "settings": {
+            "image": "shopify://shop_images/glass.png"
+          }
+        },
+        "t-4": {
+          "settings": {
+            "image": "shopify://shop_images/can-wild-blueberry.png"
+          }
+        }
+      }
+    },
+    "stockists": {
+      "blocks": {
+        "l-1": {
+          "settings": {
+            "image": "shopify://shop_images/stockist-1.png",
+            "name": "Greenleaf Market"
+          }
+        },
+        "l-2": {
+          "settings": {
+            "image": "shopify://shop_images/stockist-2.png",
+            "name": "Corner Co-op"
+          }
+        },
+        "l-3": {
+          "settings": {
+            "image": "shopify://shop_images/stockist-3.png",
+            "name": "Harbor Foods"
+          }
+        },
+        "l-4": {
+          "settings": {
+            "image": "shopify://shop_images/stockist-4.png",
+            "name": "The Pantry"
+          }
+        },
+        "l-5": {
+          "settings": {
+            "image": "shopify://shop_images/stockist-5.png",
+            "name": "Northside Grocer"
+          }
+        }
+      }
+    },
+    "film": {
+      "settings": {
+        "video": "shopify://files/videos/press-drift.mp4",
+        "cover": "shopify://shop_images/story-press.jpg",
+        "heading": "Made on the slopes of Etna"
+      }
+    },
+    "table": {
+      "blocks": {
+        "a": {
+          "settings": {
+            "product": "blood-orange",
+            "x": 34,
+            "y": 78
+          }
+        },
+        "b": {
+          "settings": {
+            "product": "pink-grapefruit",
+            "x": 62,
+            "y": 55
+          }
+        },
+        "c": {
+          "settings": {
+            "product": "wild-blueberry",
+            "x": 82,
+            "y": 40,
+            "text": "<p>From the same growers every year.</p>"
+          }
+        }
+      },
+      "settings": {
+        "image": "shopify://shop_images/flatlay-mixed.jpg",
+        "text": "<p>Everything on our table, one tap away.</p>"
+      }
+    },
+    "manifesto": {
+      "blocks": {
+        "h": {
+          "settings": {
+            "heading": "Less sugar. More fruit."
+          }
+        },
+        "t": {
+          "settings": {
+            "text": "<p>Every flavor is tasted against the fruit it came from. If it doesn't taste like the grove, it doesn't go in a can.</p>"
+          }
+        }
+      }
+    }
+  }
+}

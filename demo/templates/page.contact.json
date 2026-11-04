@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "faq": {
+      "settings": {
+        "image": "shopify://shop_images/flatlay-wild-blueberry.jpg"
+      },
+      "blocks": {
+        "f-sugar": {
+          "settings": {
+            "question": "How much sugar is in a can?",
+            "answer": "<p>5g of cane sugar per 330 ml can. The rest of the sweetness comes from the fruit itself. A regular cola has around 35g.</p>"
+          }
+        },
+        "f-prebiotic": {
+          "settings": {
+            "question": "What does prebiotic mean?",
+            "answer": "<p>Prebiotics are fibers that feed the good bacteria already living in your gut. Each can has 5g of chicory root fiber, about a fifth of what most adults should eat in a day.</p>"
+          }
+        },
+        "f-ship": {
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "<p>We ship across the US in 2 to 4 working days. Full cases ship free.</p>"
+          }
+        },
+        "f-sub": {
+          "settings": {
+            "question": "How does the subscription work?",
+            "answer": "<p>Choose a case and how often you want it. You save 15% on every delivery and can skip, swap flavors or cancel from your account at any time.</p>"
+          }
+        },
+        "f-cans": {
+          "settings": {
+            "question": "Are the cans recyclable?",
+            "answer": "<p>Yes. Aluminum can be recycled endlessly, and most cans are back on a shelf within two months.</p>"
+          }
+        }
+      }
+    }
+  }
+}
