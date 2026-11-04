@@ -7,13 +7,15 @@ First release.
 - Product hero: full-screen slides with a large product cut-out, floating ingredients, a color that changes with each flavor and a flavor switcher. Built-in can and fruit artwork works before any images are uploaded.
 - Scroll story: chapters scroll past a can-shaped image window while liquid in the chapter's color rises through it.
 - Build a case: customers fill a 12-can case from single cans and add it to the cart in one step.
-- Product page: variant picker, Shop Pay Installments, pickup availability, unit prices, subscriptions (selling plans), nutrition facts, ingredient callouts, complementary products and app blocks.
+- Product page: variant picker, Shop Pay Installments, pickup availability, unit prices, subscriptions (selling plans), nutrition facts, ingredient callouts, complementary products and app blocks. A second product template for merch and other non-food products leaves out nutrition and label facts.
+- Label facts: each value can have a unit that stays small and lowercase, so 5g doesn't read as 5G.
 - Featured product with images, video, YouTube and Vimeo links and 3D models, with thumbnails to switch between them.
 - Collection pages: a flavor-colored banner with links to each flavor, one-tap quick filters, a filter drawer or sidebar, sorting, and promo tiles placed between products.
 - Poured product cards: a pale tint of the flavor with the flavor color sitting in the bottom of the card and rising to fill it on hover. A solid style is available.
 - Collections page: each collection fans out its own products over its color.
-- Search with the same filters and sorting, plus predictive search.
+- Search with the same filters and sorting, plus predictive search that suggests products, collections, pages and blog posts.
 - Comparison table, ingredient callouts, testimonials, FAQ with structured data, social gallery, video, newsletter and promo tiles.
+- Recipe blog posts: a recipe card with ingredients and steps, followed by the comments and more posts. Related posts skip the one being read.
 - Cart drawer and cart page with a discount code field: codes apply without leaving the cart, can be removed one by one, and codes that don't apply say so. Each line shows its price per item.
 - Age verification: an optional popup that asks visitors to confirm their age and remembers the answer for as many days as you choose.
 - Footer with Follow on Shop, a large store-name wordmark, menus, country and language selectors and payment icons.

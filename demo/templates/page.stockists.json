@@ -4,10 +4,13 @@
       "blocks": {
         "slide": {
           "settings": {
-            "image": "shopify://shop_images/story-grove.jpg",
+            "image": "shopify://shop_images/flatlay-wild-blueberry.jpg",
             "text": "<p>Grab a cold can at these shops, cafés and markets, or get a case delivered.</p>"
           }
         }
+      },
+      "settings": {
+        "overlay": 50
       }
     },
     "trade": {
@@ -31,33 +34,34 @@
       "blocks": {
         "a": {
           "settings": {
-            "name": "Corner Grocery",
-            "address": "12 Market Street\nSpringfield",
-            "region": "Springfield",
+            "name": "Greenleaf Market",
+            "address": "214 Court Street\nBrooklyn, NY 11201",
+            "region": "Brooklyn",
             "hours": "Mon to Sat, 8am to 8pm"
           }
         },
         "b": {
           "settings": {
-            "name": "Harbor Deli",
-            "address": "4 Quay Road\nPort Ellen",
-            "region": "Port Ellen",
+            "name": "Harbor Foods",
+            "address": "38 Front Street\nBrooklyn, NY 11201",
+            "region": "Brooklyn",
             "hours": "Every day, 7am to 4pm"
           }
         },
         "c": {
           "settings": {
-            "name": "Fresh Fields Market",
-            "address": "88 High Street\nPort Ellen",
-            "region": "Port Ellen",
+            "name": "Corner Co-op",
+            "address": "47-12 Vernon Boulevard\nLong Island City, NY 11101",
+            "region": "Queens",
             "hours": "Every day, 9am to 9pm"
           }
         },
         "d": {
           "settings": {
             "name": "The Pantry",
-            "address": "2 Mill Lane\nBridgend",
-            "hours": "Tue to Sun, 10am to 6pm"
+            "address": "86 Orchard Street\nNew York, NY 10002",
+            "hours": "Tue to Sun, 10am to 6pm",
+            "region": "Manhattan"
           }
         }
       }

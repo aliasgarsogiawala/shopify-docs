@@ -8,7 +8,7 @@
         "f-sugar": {
           "settings": {
             "question": "How much sugar is in a can?",
-            "answer": "<p>5g of cane sugar per 330 ml can. The rest of the sweetness comes from the fruit itself. A regular cola has around 35g.</p>"
+            "answer": "<p>5g of cane sugar per 12 oz can. The rest of the sweetness comes from the fruit itself. A regular cola has around 35g.</p>"
           }
         },
         "f-prebiotic": {
@@ -20,7 +20,7 @@
         "f-ship": {
           "settings": {
             "question": "Where do you ship?",
-            "answer": "<p>We ship across the US in 2 to 4 working days. Full cases ship free.</p>"
+            "answer": "<p>We ship across the US in 2 to 4 business days. Full cases ship free.</p>"
           }
         },
         "f-sub": {

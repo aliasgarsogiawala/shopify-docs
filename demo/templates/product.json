@@ -21,7 +21,7 @@
         },
         "shipping": {
           "settings": {
-            "content": "<p>Orders ship in 2 to 4 working days. Full cases ship free. Damaged in transit? Send us a photo and we'll replace it.</p>"
+            "content": "<p>Orders ship in 2 to 4 business days. Full cases ship free. Damaged in transit? Send us a photo and we'll replace it.</p>"
           }
         }
       }
@@ -30,7 +30,7 @@
       "blocks": {
         "mq-1": {
           "settings": {
-            "text": "5g cane sugar"
+            "text": "5 grams of sugar"
           }
         },
         "mq-2": {
@@ -53,8 +53,8 @@
     "facts": {
       "settings": {
         "heading": "Per can",
-        "footnote": "Compared with the average full-sugar cola, 330 ml.",
-        "serving": "One 330 ml can"
+        "footnote": "Values are rounded to the nearest gram.",
+        "serving": "One 12 oz can"
       },
       "blocks": {
         "fa-cal": {
@@ -64,14 +64,16 @@
         },
         "fa-sugar": {
           "settings": {
-            "value": "5g",
-            "label": "Cane sugar"
+            "value": "5",
+            "label": "Cane sugar",
+            "unit": "g"
           }
         },
         "fa-fibre": {
           "settings": {
-            "value": "5g",
-            "label": "Prebiotic fiber"
+            "value": "5",
+            "label": "Prebiotic fiber",
+            "unit": "g"
           }
         },
         "fa-juice": {
@@ -98,7 +100,7 @@
           "settings": {
             "icon": "wheat",
             "title": "Gluten free",
-            "text": "<p>Made in a kitchen without wheat.</p>"
+            "text": "<p>No wheat, barley or rye in anything we make.</p>"
           }
         },
         "sugar": {

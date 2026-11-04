@@ -74,7 +74,7 @@
     "pack": {
       "settings": {
         "collection": "singles",
-        "discount_note": "Full cases ship free and save 15% at checkout."
+        "discount_note": "Full cases ship free."
       }
     },
     "moods": {
@@ -133,9 +133,9 @@
       "blocks": {
         "ch-grove": {
           "settings": {
-            "image": "shopify://shop_images/story-grove.jpg",
+            "image": "shopify://shop_images/flatlay-blood-orange.jpg",
             "kicker": "Etna, Sicily",
-            "text": "<p>Our blood oranges come from three family groves on the slopes of Etna. They are picked in the six weeks of the year when the fruit is at its reddest.</p>"
+            "text": "<p>Our blood oranges come from three family groves on the slopes of Etna. They're picked in the six weeks of the year when the fruit is at its reddest.</p>"
           }
         },
         "ch-press": {
@@ -201,13 +201,13 @@
     "faq": {
       "settings": {
         "image": "shopify://shop_images/flatlay-yuzu-lime.jpg",
-        "text": "<p>Can't find yours? We reply within a working day.</p>"
+        "text": "<p>Can't find yours? We reply within a business day.</p>"
       },
       "blocks": {
         "f-sugar": {
           "settings": {
             "question": "How much sugar is in a can?",
-            "answer": "<p>5g of cane sugar per 330 ml can. The rest of the sweetness comes from the fruit itself. A regular cola has around 35g.</p>"
+            "answer": "<p>5g of cane sugar per 12 oz can. The rest of the sweetness comes from the fruit itself. A regular cola has around 35g.</p>"
           }
         },
         "f-prebiotic": {
@@ -219,7 +219,7 @@
         "f-ship": {
           "settings": {
             "question": "Where do you ship?",
-            "answer": "<p>We ship across the US in 2 to 4 working days. Full cases ship free.</p>"
+            "answer": "<p>We ship across the US in 2 to 4 business days. Full cases ship free.</p>"
           }
         },
         "f-sub": {
@@ -270,7 +270,9 @@
         }
       },
       "settings": {
-        "handle": "@tangelosoda"
+        "handle": "@tangelosoda",
+        "heading": "From our feed",
+        "text": "<p>New flavors, recipes and the odd look behind the scenes, every week.</p>"
       }
     },
     "signup": {
@@ -284,13 +286,14 @@
     },
     "drop": {
       "settings": {
-        "kicker": "Back for summer",
+        "kicker": "Winter batch",
         "button_label": "Shop the drop",
         "heading": "Black Cherry won't last",
-        "text": "<p>One harvest, one batch. When these cans are gone, Black Cherry is off the menu until next year.</p>",
+        "text": "<p>One harvest, one batch. When these cans are gone, Black Cherry is off the menu until next winter.</p>",
         "product": "black-cherry",
         "button_link": "shopify://products/black-cherry",
-        "done_text": "This one's sold out until next year."
+        "done_text": "This one's sold out until next year.",
+        "end_date": "2027-02-28"
       }
     },
     "finder": {
@@ -341,7 +344,7 @@
         },
         "often": {
           "settings": {
-            "text": "<p>Every two, four or eight weeks. Change it whenever you like.</p>"
+            "text": "<p>Every two weeks or once a month. Change it whenever you like.</p>"
           }
         },
         "door": {
@@ -355,7 +358,7 @@
       "blocks": {
         "mq-1": {
           "settings": {
-            "text": "5g cane sugar"
+            "text": "5 grams of sugar"
           }
         },
         "mq-2": {

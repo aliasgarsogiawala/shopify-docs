@@ -9,6 +9,7 @@
           "upsell_heading": "Make it a mixed case"
         }
       }
-    }
+    },
+    "free_shipping_threshold": 30
   }
 }

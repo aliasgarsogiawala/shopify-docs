@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "main": {
+      "blocks": {
+        "buy": {
+          "settings": {
+            "note": "Free shipping on every full case"
+          }
+        },
+        "benefits": {
+          "settings": {
+            "text_1": "Ships in 2 to 4 business days",
+            "text_2": "Free returns within 30 days",
+            "text_3": "Made in small runs"
+          }
+        },
+        "details": {
+          "settings": {
+            "content": "<p>Each piece is made in a small run with our printers and makers. See the description above for materials and sizing. Wash cotton cold and hang it to dry; wipe enamel and glass with a soft cloth.</p>"
+          }
+        },
+        "shipping": {
+          "settings": {
+            "content": "<p>Orders ship in 2 to 4 business days. Unworn merch can be returned within 30 days for a full refund.</p>"
+          }
+        }
+      }
+    }
+  }
+}

@@ -16,8 +16,10 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const STORE = process.argv[2];
 // --refresh re-uploads demo/images over the files already in the store and brings existing products up to date.
 const REFRESH = process.argv.includes('--refresh');
+// --keep-files skips re-uploading images that are already in Files, for a refresh that only changes text.
+const KEEP_FILES = process.argv.includes('--keep-files');
 if (!STORE || !STORE.endsWith('.myshopify.com')) {
-  console.error('Usage: node scripts/seed-demo-store.mjs <store>.myshopify.com [--refresh]');
+  console.error('Usage: node scripts/seed-demo-store.mjs <store>.myshopify.com [--refresh] [--keep-files]');
   process.exit(1);
 }
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'tangelo-seed-'));
@@ -131,7 +133,7 @@ async function replaceFiles(paths, have) {
 
 async function uploadFiles(paths) {
   const have = await existingFiles();
-  if (REFRESH) await replaceFiles(paths, have);
+  if (REFRESH && !KEEP_FILES) await replaceFiles(paths, have);
   const todo = paths.filter((p) => !have[path.basename(p)]);
   log(`files: ${paths.length - todo.length} already in Files, uploading ${todo.length}`);
   if (todo.length) {
@@ -198,9 +200,9 @@ const PACKS = [
 const PRODUCTS = [
   ...FLAVOURS.map((f) => ({ ...f, type: 'Soda', images: [`can-${f.handle}.png`, `pack-${f.handle}.png`], packs: PACKS })),
   ...FLAVOURS.map((f) => ({ ...f, handle: `${f.handle}-single`, type: 'Single', tags: [...f.tags, 'single'], rating: null, images: [`can-${f.handle}.png`], packs: [{ name: 'Default Title', price: PRICES.single }] })),
-  { handle: 'mixed-case', title: 'The Mixed Case', short: 'Mixed', color: '#D7F23A', subtitle: 'All five flavors, 12 cans', tags: ['bundle', 'best-seller'], rating: 4.9, reviews: 1204, type: 'Bundle',
+  { handle: 'mixed-case', title: 'The Mixed Case', short: 'Mixed', color: '#D7F23A', subtitle: 'All five flavors in one case', tags: ['bundle', 'best-seller'], rating: 4.9, reviews: 1204, type: 'Bundle',
     desc: 'Twelve cans across all five flavors. The easiest way to find a favorite, or to avoid picking one.',
-    images: ['pack-mixed-case.png', 'can-blood-orange.png'], packs: PACKS },
+    images: ['pack-mixed-case.png', 'flatlay-mixed.jpg'], packs: PACKS },
   { handle: 'tangelo-glass', legacyHandles: ['zestra-glass', 'pith-glass'], title: 'Can Glass', short: 'Glass', color: '#C9E8FF', subtitle: '16 oz, recycled glass', tags: ['merch'], rating: 4.6, reviews: 48, type: 'Merch',
     desc: 'A can-shaped glass made from recycled glass. Holds a whole can, a slice and plenty of ice.',
     images: ['glass.png'], packs: [{ name: 'Default Title', price: PRICES.glass }] },
@@ -233,20 +235,24 @@ const COLLECTIONS = [
 
 const PAGES = [
   { handle: 'about', title: 'Our story', templateSuffix: 'about', body: '<p>Tangelo started in a shared kitchen in 2021.</p>' },
-  { handle: 'contact', title: 'Contact', templateSuffix: 'contact', keepBody: true, body: '<p>Questions about an order, wholesale or stocking Tangelo? Write to us and a real person will reply within a working day.</p>' },
+  { handle: 'contact', title: 'Contact', templateSuffix: 'contact', keepBody: true, body: '<p>Questions about an order, wholesale or stocking Tangelo? Write to us and a real person will reply within a business day.</p>' },
   { handle: 'where-to-buy', title: 'Where to buy', templateSuffix: 'stockists', body: '' },
   { handle: 'shipping', title: 'Shipping', templateSuffix: null,
-    body: `<p>We ship in 2 to 4 working days. Full cases ship free; smaller orders are a flat ${PRICES.flatShipping}.</p><h2>Damaged cans</h2><p>If anything arrives dented or leaking, send us a photo within 14 days and we will replace it.</p><h2>Subscriptions</h2><p>Subscriptions ship on the same day each cycle. You can skip, swap or cancel from your account up to two days before.</p>` },
+    body: `<p>We ship in 2 to 4 business days. Full cases ship free; smaller orders are a flat ${PRICES.flatShipping}.</p><h2>Damaged cans</h2><p>If anything arrives dented or leaking, send us a photo within 14 days and we\'ll replace it.</p><h2>Subscriptions</h2><p>Subscriptions ship on the same day each cycle. You can skip, swap or cancel from your account up to two days before.</p>` },
 ];
 
 const ARTICLE_BODY = (excerpt) =>
-  `<p>${excerpt}</p><p>Every batch starts with fruit we have tasted ourselves. We press it within a day of picking, check the sugar by hand and only then decide how much of anything else goes in. Most of the time the answer is less than you would think.</p><h2>What you need</h2><ul><li>One can of Tangelo, cold</li><li>A tall glass and a lot of ice</li><li>Something sharp to finish: a twist of peel or a pinch of salt</li></ul><p>Pour slowly down the side of the glass to keep the bubbles, then stop before the top. Drink it while it is still loud.</p><blockquote>If it does not taste like the fruit, it does not go in a can.</blockquote><p>That is the only rule we have kept since the first batch.</p>`;
+  `<p>${excerpt}</p><p>Every batch starts with fruit we've tasted ourselves. We press it within a day of picking, check the sugar by hand and only then decide how much of anything else goes in. Most of the time the answer is less than you'd think.</p><blockquote>If it doesn't taste like the fruit, it doesn't go in a can.</blockquote><p>That's the only rule we've kept since the first batch.</p>`;
+
+// Merch uses the product template without nutrition, label facts or soda claims.
+const templateFor = (p) => (p.type === 'Merch' ? 'merch' : null);
 
 const ARTICLES = [
-  { handle: 'yuzu-spritz', color: '#D5EE3A', title: 'The two-minute yuzu spritz', image: 'flatlay-yuzu-lime.jpg', tags: ['Recipes'], templateSuffix: 'recipe', excerpt: 'Yuzu Lime, a splash of dry vermouth and plenty of ice. That is the whole recipe.' },
+  { handle: 'yuzu-spritz', color: '#D5EE3A', title: 'The two-minute yuzu spritz', image: 'flatlay-yuzu-lime.jpg', tags: ['Recipes'], templateSuffix: 'recipe', excerpt: 'Yuzu Lime, a splash of dry vermouth and plenty of ice. That\'s the whole recipe.',
+    body: '<p>Yuzu Lime, a splash of dry vermouth and plenty of ice. That\'s the whole recipe.</p><p>Yuzu is sharp, floral and a little bitter, so it doesn\'t need much help. The vermouth rounds it out, though it\'s just as good without, and a strip of lime peel wakes it up at the end.</p><p>Everything you need is in the recipe card below. Put the can in the freezer for ten minutes first and the whole thing really does take two.</p>' },
   { handle: 'why-prebiotic', color: '#C58146', title: 'What prebiotic fiber actually does', image: 'story-grove.jpg', tags: ['Notes'], excerpt: 'A short, plain-English guide to chicory root and the bacteria that like it.' },
-  { handle: 'etna-harvest', color: '#392EC3', title: 'Harvest week on Etna', image: 'story-press.jpg', tags: ['Notes'], excerpt: 'Six weeks, three groves and about forty tonnes of blood oranges.' },
-  { handle: 'cherry-bourbon', color: '#980E3F', title: 'Black Cherry and bourbon, ranked by our team', image: 'flatlay-black-cherry.jpg', tags: ['Recipes'], excerpt: 'We tried four bourbons so you do not have to.' },
+  { handle: 'etna-harvest', color: '#392EC3', title: 'Harvest week on Etna', image: 'story-press.jpg', tags: ['Notes'], excerpt: 'Six weeks, three groves and about forty tons of blood oranges.' },
+  { handle: 'cherry-bourbon', color: '#980E3F', title: 'Black Cherry and bourbon, ranked by our team', image: 'flatlay-black-cherry.jpg', tags: ['Recipes'], excerpt: 'We tried four bourbons so you don\'t have to.' },
 ];
 
 /* ---------- Steps ---------- */
@@ -307,7 +313,20 @@ function ensureProducts(files, publicationId) {
             `mutation Update($product: ProductUpdateInput!) {
               productUpdate(product: $product) { product { id } userErrors { field message } }
             }`,
-            { product: { id: found.id, handle: p.handle, redirectNewHandle: true, vendor: 'Tangelo', descriptionHtml: `<p>${p.desc}</p>` } }
+            {
+              product: {
+                id: found.id,
+                handle: p.handle,
+                redirectNewHandle: true,
+                vendor: 'Tangelo',
+                descriptionHtml: `<p>${p.desc}</p>`,
+                templateSuffix: templateFor(p),
+                metafields: [
+                  { namespace: 'custom', key: 'short_name', type: 'single_line_text_field', value: p.short },
+                  { namespace: 'custom', key: 'subtitle', type: 'single_line_text_field', value: p.subtitle },
+                ],
+              },
+            }
           ).productUpdate
         );
         log(`product ${p.handle}: refreshed`);
@@ -335,6 +354,7 @@ function ensureProducts(files, publicationId) {
       descriptionHtml: `<p>${p.desc}</p>`,
       vendor: 'Tangelo',
       productType: p.type,
+      templateSuffix: templateFor(p),
       tags: p.tags,
       status: 'ACTIVE',
       productOptions: [{ name: optionName, position: 1, values: p.packs.map((v) => ({ name: v.name })) }],
@@ -465,7 +485,7 @@ function ensureBlog(files) {
           `articleUpdate ${a.handle}`,
           gql(
             `mutation Article($id: ID!, $article: ArticleUpdateInput!) { articleUpdate(id: $id, article: $article) { article { id } userErrors { field message } } }`,
-            { id: have[a.handle], article: { body: ARTICLE_BODY(a.excerpt), summary: `<p>${a.excerpt}</p>`, metafields: articleColor(a), templateSuffix: a.templateSuffix || null } }
+            { id: have[a.handle], article: { body: a.body || ARTICLE_BODY(a.excerpt), summary: `<p>${a.excerpt}</p>`, metafields: articleColor(a), templateSuffix: a.templateSuffix || null } }
           ).articleUpdate
         );
         log(`article ${a.handle}: refreshed`);
@@ -481,7 +501,7 @@ function ensureBlog(files) {
             blogId: blog.id,
             title: a.title,
             handle: a.handle,
-            body: ARTICLE_BODY(a.excerpt),
+            body: a.body || ARTICLE_BODY(a.excerpt),
             summary: `<p>${a.excerpt}</p>`,
             tags: a.tags,
             author: { name: 'Mara Velasco' },
