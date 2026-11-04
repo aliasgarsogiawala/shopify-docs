@@ -38,7 +38,7 @@ const deepMerge = (a, b) => {
   return out;
 };
 
-const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'tangelo-theme-'));
+const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'tank-theme-'));
 for (const dir of THEME_FOLDERS.filter((d) => fs.existsSync(path.join(THEME_DIR, d)))) {
   fs.cpSync(path.join(THEME_DIR, dir), path.join(stage, dir), { recursive: true, filter: (src) => !src.endsWith('.DS_Store') });
 }

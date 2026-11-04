@@ -1,4 +1,4 @@
-# Tangelo release notes
+# Tank release notes
 
 ## 1.0.0
 

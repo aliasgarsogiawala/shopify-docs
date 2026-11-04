@@ -1,4 +1,4 @@
-"""Build docs/index.html for the Tangelo theme from its schemas.
+"""Build docs/index.html for the Tank theme from its schemas.
 
 Section and theme-setting references are generated from the theme files, so they stay in step with
 the code. The guide text around them is written below. Run: python3 scripts/build_docs.py
@@ -34,7 +34,7 @@ def slug(text):
 
 # What each section is for, in the merchant's words. Sections missing here fall back to their name.
 SECTION_NOTES = {
-    "tangelo-hero": "The signature slideshow. Each slide is a flavor: its color pours up from the bottom, the name fills the screen and the can drops into place. Up to six slides, with a switcher that fills like a glass while each slide plays.",
+    "tank-hero": "The signature slideshow. Each slide is a flavor: its color pours up from the bottom, the name fills the screen and the can drops into place. Up to six slides, with a switcher that fills like a glass while each slide plays.",
     "announcement-bar": "Rotating one-line messages above the header, with arrows.",
     "header": "Logo, menu, search, account and cart. Dropdown links to collections show that collection's products standing in a pour of its flavor color, which refills as visitors move between links. Can sit transparently over the first section.",
     "footer": "Menus, a short brand text, newsletter sign-up, social links and payment icons.",

@@ -1,6 +1,6 @@
-# Tangelo docs and tools
+# Tank docs and tools
 
-Everything around the Tangelo Shopify theme that isn't the theme itself.
+Everything around the Tank Shopify theme that isn't the theme itself.
 
 - `docs/`: the merchant guide (`docs/index.html`), built from the theme's settings by `scripts/build_docs.py`. Host this folder at the theme's documentation URL.
 - `demo/`: the demo store's content. Product, page and journal images, the press video, and the settings that are merged over the theme's templates for the demo store.

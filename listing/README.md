@@ -1,10 +1,11 @@
-# Theme Store listing: Tangelo preset
+# Theme Store listing: Tank preset
 
-Copy for the preset's listing form in the Partner Dashboard (Themes, then Tangelo, then the listing for the Tangelo preset). The theme zip ships one preset, so this is the only listing. Limits are from [Theme Store listing page](https://shopify.dev/docs/storefronts/themes/store/review-process/listings).
+Copy for the preset's listing form in the Partner Dashboard (Themes, then Tank, then the listing for the Tank preset). The theme zip ships one preset, so this is the only listing. Limits are from [Theme Store listing page](https://shopify.dev/docs/storefronts/themes/store/review-process/listings).
 
 ## Demo store
 
 - URL: https://tangelo-demo-0e5pc4tq.myshopify.com
+- Tangelo is the made-up soda brand on the demo store, so it appears on the cans and in the demo copy. The theme is called Tank.
 - Password: the storefront password from Online Store, then Preferences. It isn't written here because this repository is public.
 
 ## Tagline
@@ -22,8 +23,8 @@ Copy for the preset's listing form in the Partner Dashboard (Themes, then Tangel
 
 | File | Size | Alt text |
 | --- | --- | --- |
-| `desktop-home.png` | 2000 x 2496 | Tangelo home page on desktop: a Blood Orange can over the flavor name in huge black letters on orange, with blood orange slices, the shop buttons and the flavor switcher |
-| `mobile-home.png` | 750 x 1334 | Tangelo home page on a phone: the Blood Orange slide with the can, the flavor name, a short description, two buttons and the flavor switcher |
+| `desktop-home.png` | 2000 x 2496 | Tank home page on desktop: a Blood Orange can over the flavor name in huge black letters on orange, with blood orange slices, the shop buttons and the flavor switcher |
+| `mobile-home.png` | 750 x 1334 | Tank home page on a phone: the Blood Orange slide with the can, the flavor name, a short description, two buttons and the flavor switcher |
 
 ## Key highlights
 
@@ -41,7 +42,7 @@ Images are 1600 x 1200. Titles are 30 characters at most and descriptions 140.
 
 ## Metadata description
 
-> Tangelo is a bold, colorful theme for drink and snack brands, with a flavor-by-flavor hero, a build-your-own case, subscriptions and nutrition panels.
+> Tank is a bold, colorful theme for drink and snack brands, with a flavor-by-flavor hero, a build-your-own case, subscriptions and nutrition panels.
 
 ## Refreshing the images
 

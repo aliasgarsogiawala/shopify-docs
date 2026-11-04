@@ -9,7 +9,7 @@ const [out, password] = process.argv.slice(2);
 const STORE = 'https://tangelo-demo-0e5pc4tq.myshopify.com';
 const port = 9500 + Math.floor(Math.random() * 100);
 mkdirSync(out, { recursive: true });
-const profile = mkdtempSync(path.join(os.tmpdir(), 'tangelo-listing-'));
+const profile = mkdtempSync(path.join(os.tmpdir(), 'tank-listing-'));
 const chrome = spawn('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', ['--headless=new', `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`, '--hide-scrollbars', '--no-first-run', 'about:blank'], { stdio: 'ignore' });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let ws, id = 0; const pending = new Map();
@@ -20,7 +20,7 @@ const go = async (path, settle = 6000) => { await send('Page.navigate', { url: S
 // Wait for fonts and every visible image, then stop slideshows and marquees so the frame is steady.
 // Also holds the hero on its first flavor and drops the gutter the theme keeps for a scrollbar (hidden here).
 const ready = () => evaluate(`(async () => {
-  document.querySelectorAll('tangelo-hero').forEach((h) => h.stop && h.stop());
+  document.querySelectorAll('tank-hero').forEach((h) => h.stop && h.stop());
   document.documentElement.style.scrollbarGutter = 'auto';
   await document.fonts.ready;
   const imgs = [...document.images].filter((i) => { const r = i.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight * 1.2; });
