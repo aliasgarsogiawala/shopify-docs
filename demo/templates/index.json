@@ -133,14 +133,14 @@
       "blocks": {
         "ch-grove": {
           "settings": {
-            "image": "shopify://shop_images/flatlay-blood-orange.jpg",
+            "image": "shopify://shop_images/story-pick.jpg",
             "kicker": "Etna, Sicily",
             "text": "<p>Our blood oranges come from three family groves on the slopes of Etna. They're picked in the six weeks of the year when the fruit is at its reddest.</p>"
           }
         },
         "ch-press": {
           "settings": {
-            "image": "shopify://shop_images/story-press.jpg",
+            "image": "shopify://shop_images/story-juice.jpg",
             "kicker": "Within 24 hours",
             "heading": "Pressed, never concentrated",
             "text": "<p>Fruit is cold-pressed the day it arrives and goes straight into the tank. No concentrate and no flavorings to fill the gaps.</p>"

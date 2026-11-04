@@ -10,6 +10,7 @@
         }
       }
     },
-    "free_shipping_threshold": 30
+    "free_shipping_threshold": 30,
+    "favicon": "shopify://shop_images/favicon.png"
   }
 }

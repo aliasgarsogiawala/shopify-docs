@@ -55,6 +55,11 @@ const MIME = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
 
 // Alt text for the lifestyle photos, read by screen readers wherever the theme shows them. Cut-outs and decor stay without.
 const FILE_ALT = {
+  'about-founders.jpg': 'Two founders at work in a shared kitchen, one pressing blood oranges on a steel citrus press while the other tastes the juice',
+  'journal-cherry-bourbon.jpg': 'Four friends tasting cherry-red drinks around a table at night, a bowl of black cherries between them',
+  'journal-chicory.jpg': 'A grower holding a bundle of freshly dug chicory roots at a market stall',
+  'journal-etna-harvest.jpg': 'A woman picking blood oranges in a grove below Mount Etna, crates of fruit at her feet',
+  'journal-yuzu-spritz.jpg': 'A hand dropping a slice of yuzu into a spritz glass full of ice on a sunny garden table',
   'banner-study-night.jpg': 'A woman writing in a notebook at a desk at night, a can of Tangelo Yuzu Lime beside her',
   'banner-study-night-mobile.jpg': 'A woman writing in a notebook at a desk at night, a can of Tangelo Yuzu Lime beside her',
   'feed-blood-drive.jpg': "A man in sunglasses holding up a can of Tangelo Blood Orange in the driver's seat",
@@ -67,6 +72,8 @@ const FILE_ALT = {
   'flatlay-wild-blueberry.jpg': 'Two cans of Tangelo Wild Blueberry among blueberries',
   'flatlay-mixed.jpg': 'All five Tangelo flavors lined up with limes and grapefruit slices',
   'table-friends.jpg': 'Three friends toasting with cans of Tangelo Blood Orange, Wild Blueberry and Black Cherry outdoors at night',
+  'story-juice.jpg': 'Halved blood oranges going into a steel press as fresh red juice pours into a tank',
+  'story-pick.jpg': 'A gloved hand clipping a blood orange from a tree in a grove on Mount Etna',
   'story-grove.jpg': 'Blood oranges, grapefruit and limes, whole and halved',
   'story-press.jpg': 'Grapefruit and blood orange halves',
   'story-can.jpg': 'Rows of Tangelo cans in every flavor',
@@ -287,11 +294,11 @@ const ARTICLE_BODY = (excerpt) =>
 const templateFor = (p) => (p.type === 'Merch' ? 'merch' : null);
 
 const ARTICLES = [
-  { handle: 'yuzu-spritz', color: '#D5EE3A', title: 'The two-minute yuzu spritz', image: 'flatlay-yuzu-lime.jpg', tags: ['Recipes'], templateSuffix: 'recipe', excerpt: 'Yuzu Lime, a splash of dry vermouth and plenty of ice. That\'s the whole recipe.',
+  { handle: 'yuzu-spritz', color: '#D5EE3A', title: 'The two-minute yuzu spritz', image: 'journal-yuzu-spritz.jpg', tags: ['Recipes'], templateSuffix: 'recipe', excerpt: 'Yuzu Lime, a splash of dry vermouth and plenty of ice. That\'s the whole recipe.',
     body: '<p>Yuzu Lime, a splash of dry vermouth and plenty of ice. That\'s the whole recipe.</p><p>Yuzu is sharp, floral and a little bitter, so it doesn\'t need much help. The vermouth rounds it out, though it\'s just as good without, and a strip of lime peel wakes it up at the end.</p><p>Everything you need is in the recipe card below. Put the can in the freezer for ten minutes first and the whole thing really does take two.</p>' },
-  { handle: 'why-prebiotic', color: '#C58146', title: 'What prebiotic fiber actually does', image: 'story-grove.jpg', tags: ['Notes'], excerpt: 'A short, plain-English guide to chicory root and the bacteria that like it.' },
-  { handle: 'etna-harvest', color: '#392EC3', title: 'Harvest week on Etna', image: 'story-press.jpg', tags: ['Notes'], excerpt: 'Six weeks, three groves and about forty tons of blood oranges.' },
-  { handle: 'cherry-bourbon', color: '#980E3F', title: 'Black Cherry and bourbon, ranked by our team', image: 'flatlay-black-cherry.jpg', tags: ['Recipes'], excerpt: 'We tried four bourbons so you don\'t have to.' },
+  { handle: 'why-prebiotic', color: '#C58146', title: 'What prebiotic fiber actually does', image: 'journal-chicory.jpg', tags: ['Notes'], excerpt: 'A short, plain-English guide to chicory root and the bacteria that like it.' },
+  { handle: 'etna-harvest', color: '#392EC3', title: 'Harvest week on Etna', image: 'journal-etna-harvest.jpg', tags: ['Notes'], excerpt: 'Six weeks, three groves and about forty tons of blood oranges.' },
+  { handle: 'cherry-bourbon', color: '#980E3F', title: 'Black Cherry and bourbon, ranked by our team', image: 'journal-cherry-bourbon.jpg', tags: ['Recipes'], excerpt: 'We tried four bourbons so you don\'t have to.' },
 ];
 
 /* ---------- Steps ---------- */
@@ -500,6 +507,8 @@ function ensurePages() {
   return ids;
 }
 
+// Article photos carry the same alt text as the file, so cards describe the picture, not repeat the title.
+const articleImage = (a, files) => ({ url: files[a.image].url, altText: FILE_ALT[a.image] || a.title });
 // The article header takes the backdrop color of the article's image.
 const articleColor = (a) => [{ namespace: 'custom', key: 'flavor_color', type: 'color', value: a.color }];
 
@@ -524,7 +533,7 @@ function ensureBlog(files) {
           `articleUpdate ${a.handle}`,
           gql(
             `mutation Article($id: ID!, $article: ArticleUpdateInput!) { articleUpdate(id: $id, article: $article) { article { id } userErrors { field message } } }`,
-            { id: have[a.handle], article: { body: a.body || ARTICLE_BODY(a.excerpt), summary: `<p>${a.excerpt}</p>`, metafields: articleColor(a), templateSuffix: a.templateSuffix || null } }
+            { id: have[a.handle], article: { body: a.body || ARTICLE_BODY(a.excerpt), summary: `<p>${a.excerpt}</p>`, image: articleImage(a, files), metafields: articleColor(a), templateSuffix: a.templateSuffix || null } }
           ).articleUpdate
         );
         log(`article ${a.handle}: refreshed`);
@@ -544,7 +553,7 @@ function ensureBlog(files) {
             summary: `<p>${a.excerpt}</p>`,
             tags: a.tags,
             author: { name: 'Mara Velasco' },
-            image: { url: files[a.image].url, altText: a.title },
+            image: articleImage(a, files),
             metafields: articleColor(a),
             templateSuffix: a.templateSuffix || null,
             isPublished: true,
