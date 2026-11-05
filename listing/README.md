@@ -67,7 +67,7 @@ Tick only these. Each one is in the theme without extra code:
 
 ## Testing instructions
 
-> The storefront password is in the password field of this form. Start on the home page: use the flavor switcher in the hero, then scroll to the pinned story, the flavor finder and the case builder under "Build a case", which fills a 6, 12 or 24-can case and adds it to the cart. Open Blood Orange to see the flavor colors, nutrition panel, subscribe and save, and the sticky buy bar. The About page has image hotspots with products, and Where to buy has the stockist search. Checkout uses the test payment gateway.
+> The storefront password is in the password field of this form. Start on the home page: use the flavor switcher in the hero, then scroll to the pinned story, the flavor finder and the case builder, which fills a 6, 12 or 24-can case and adds it to the cart. Open Blood Orange to see the flavor colors, nutrition panel and sticky buy bar. The subscription picker only shows on products with selling plans, which need an app, so it isn't on this demo store. The About page has image hotspots with products, and Where to buy has the stockist search. Checkout uses the test payment gateway.
 
 ## Theme review notes
 
