@@ -43,6 +43,38 @@ Images are 1600 x 1200. Titles are 30 characters at most and descriptions 140.
 
 > Tank is a bold, colorful theme for drink and snack brands, with a flavor-by-flavor hero, a build-your-own case, subscriptions and nutrition panels.
 
+## Theme price
+
+Choose from $100 to $500 USD, in steps of $10. Suggested: $300.
+
+## Features
+
+Tick only these. Each one is in the theme without extra code:
+
+- Image display: high resolution images, image galleries, image hotspot, image zoom, slideshow
+- Product details: color swatches, ingredients/nutritional information, product options, product videos, shipping/delivery information
+- Visual effects: animation
+- Conversion optimization: cross-selling (complete the look), recently viewed, recommended products, stock counter, store locator
+- Promotional content: blogs, in-menu promos, product badges, promo banners, promo tiles
+- Trust/social proof: age verifier, FAQ page, product reviews
+- Carts and checkout: cart notes, in-store pickups, quick buy, slide-out cart, sticky cart
+- Navigation and filtering: enhanced search, mega menu, product filtering and sorting, sticky header
+
+## Merchant support
+
+- Documentation: https://techtics.in/tank/docs
+- Support: https://techtics.in/tank/support
+
+## Testing instructions
+
+> The storefront password is in the password field of this form. Start on the home page: use the flavor switcher in the hero, then scroll to the pinned story, the flavor finder and the case builder under "Build a case", which fills a 6, 12 or 24-can case and adds it to the cart. Open Blood Orange to see the flavor colors, nutrition panel, subscribe and save, and the sticky buy bar. The About page has image hotspots with products, and Where to buy has the stockist search. Checkout uses the test payment gateway.
+
+## Theme review notes
+
+Add a line about your own experience building themes, then:
+
+> Tank is built for drink and snack brands that sell a small range by flavor, by the can and by the case. Each flavor carries its own color through the hero, product page and cards, so a small catalog feels big. The case builder and subscriptions raise order value, and nutrition panels answer the questions these shoppers ask before they buy.
+
 ## Refreshing the images
 
 The images come from the live demo store, so retake them after the demo changes. `scripts/capture-listing.mjs` logs in with the storefront password and saves all five here:
