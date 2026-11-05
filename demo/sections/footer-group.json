@@ -4,12 +4,12 @@
       "blocks": {
         "text-visit": {
           "settings": {
-            "text": "<p>hello@tangelosoda.com<br>Mon to Fri, 9am to 5pm</p>"
+            "text": "<p>hello@tanksoda.com<br>Mon to Fri, 9am to 5pm</p>"
           }
         }
       },
       "settings": {
-        "brand_text": "<p><strong>A little zest. A lot of life.</strong></p><p>Tangelo is a sparkling botanical soda made with real fruit, a little cane sugar and nothing else you need to look up.</p>",
+        "brand_text": "<p><strong>A little zest. A lot of life.</strong></p><p>Tank is a sparkling botanical soda made with real fruit, a little cane sugar and nothing else you need to look up.</p>",
         "newsletter_heading": "Get the first sip of new flavors",
         "newsletter_text": "<p>One email a month. New drops, restocks and the odd recipe.</p>"
       }

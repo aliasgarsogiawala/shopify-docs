@@ -159,7 +159,7 @@
     "compare": {
       "settings": {
         "us_image": "shopify://shop_images/can-blood-orange.png",
-        "us_label": "Tangelo",
+        "us_label": "Tank",
         "text": "<p>The same fizz with a fraction of the sugar, and something good for your gut.</p>",
         "them_label": "Regular soda",
         "button_label": "Try a mixed case"
@@ -291,7 +291,7 @@
         }
       },
       "settings": {
-        "handle": "@tangelosoda",
+        "handle": "@tanksoda",
         "heading": "From our feed",
         "text": "<p>New flavors, recipes and the odd look behind the scenes, every week.</p>"
       },
@@ -355,7 +355,7 @@
       },
       "settings": {
         "kicker": "Thirty-second quiz",
-        "heading": "Which Tangelo are you?",
+        "heading": "Which Tank are you?",
         "text": "<p>Three questions, one can. We'll match you to the flavor you'll keep coming back to.</p>",
         "image": "shopify://shop_images/pack-mixed-case.png"
       }

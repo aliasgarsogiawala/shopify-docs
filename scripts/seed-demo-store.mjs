@@ -1,4 +1,4 @@
-// Fills a Shopify store with the Tangelo demo content the theme's demo/ templates expect:
+// Fills a Shopify store with the Tank demo content the theme's demo/ templates expect:
 // files (demo/images, demo/videos), metafield definitions, products, collections, pages, the journal blog and menus.
 // Safe to re-run: anything that already exists (matched by file name or handle) is left alone.
 //
@@ -22,7 +22,7 @@ if (!STORE || !STORE.endsWith('.myshopify.com')) {
   console.error('Usage: node scripts/seed-demo-store.mjs <store>.myshopify.com [--refresh] [--keep-files]');
   process.exit(1);
 }
-const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'tangelo-seed-'));
+const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'tank-seed-'));
 
 /* ---------- Admin GraphQL through Shopify CLI ---------- */
 
@@ -60,23 +60,23 @@ const FILE_ALT = {
   'journal-chicory.jpg': 'A grower holding a bundle of freshly dug chicory roots at a market stall',
   'journal-etna-harvest.jpg': 'A woman picking blood oranges in a grove below Mount Etna, crates of fruit at her feet',
   'journal-yuzu-spritz.jpg': 'A hand dropping a slice of yuzu into a spritz glass full of ice on a sunny garden table',
-  'banner-study-night.jpg': 'A woman writing in a notebook at a desk at night, a can of Tangelo Yuzu Lime beside her',
-  'banner-study-night-mobile.jpg': 'A woman writing in a notebook at a desk at night, a can of Tangelo Yuzu Lime beside her',
-  'feed-blood-drive.jpg': "A man in sunglasses holding up a can of Tangelo Blood Orange in the driver's seat",
-  'feed-yuzu-gym.jpg': 'A man with a towel around his neck holding a can of Tangelo Yuzu Lime at the gym',
-  'feed-yuzu-sip.jpg': 'A woman drinking a can of Tangelo Yuzu Lime at the gym',
-  'flatlay-blood-orange.jpg': 'Two cans of Tangelo Blood Orange among blood orange slices',
-  'flatlay-yuzu-lime.jpg': 'Two cans of Tangelo Yuzu Lime among limes',
-  'flatlay-black-cherry.jpg': 'Two cans of Tangelo Black Cherry among cherries',
-  'flatlay-pink-grapefruit.jpg': 'A can of Tangelo Pink Grapefruit with grapefruit halves',
-  'flatlay-wild-blueberry.jpg': 'Two cans of Tangelo Wild Blueberry among blueberries',
-  'flatlay-mixed.jpg': 'All five Tangelo flavors lined up with limes and grapefruit slices',
-  'table-friends.jpg': 'Three friends toasting with cans of Tangelo Blood Orange, Wild Blueberry and Black Cherry outdoors at night',
+  'banner-study-night.jpg': 'A woman writing in a notebook at a desk at night, a can of Tank Yuzu Lime beside her',
+  'banner-study-night-mobile.jpg': 'A woman writing in a notebook at a desk at night, a can of Tank Yuzu Lime beside her',
+  'feed-blood-drive.jpg': "A man in sunglasses holding up a can of Tank Blood Orange in the driver's seat",
+  'feed-yuzu-gym.jpg': 'A man with a towel around his neck holding a can of Tank Yuzu Lime at the gym',
+  'feed-yuzu-sip.jpg': 'A woman drinking a can of Tank Yuzu Lime at the gym',
+  'flatlay-blood-orange.jpg': 'Two cans of Tank Blood Orange among blood orange slices',
+  'flatlay-yuzu-lime.jpg': 'Two cans of Tank Yuzu Lime among limes',
+  'flatlay-black-cherry.jpg': 'Two cans of Tank Black Cherry among cherries',
+  'flatlay-pink-grapefruit.jpg': 'A can of Tank Pink Grapefruit with grapefruit halves',
+  'flatlay-wild-blueberry.jpg': 'Two cans of Tank Wild Blueberry among blueberries',
+  'flatlay-mixed.jpg': 'All five Tank flavors lined up with limes and grapefruit slices',
+  'table-friends.jpg': 'Three friends toasting with cans of Tank Blood Orange, Wild Blueberry and Black Cherry outdoors at night',
   'story-juice.jpg': 'Halved blood oranges going into a steel press as fresh red juice pours into a tank',
   'story-pick.jpg': 'A gloved hand clipping a blood orange from a tree in a grove on Mount Etna',
   'story-grove.jpg': 'Blood oranges, grapefruit and limes, whole and halved',
   'story-press.jpg': 'Grapefruit and blood orange halves',
-  'story-can.jpg': 'Rows of Tangelo cans in every flavor',
+  'story-can.jpg': 'Rows of Tank cans in every flavor',
 };
 
 async function existingFiles() {
@@ -249,7 +249,7 @@ const PRODUCTS = [
   { handle: 'mixed-case', title: 'The Mixed Case', short: 'Mixed', color: '#D7F23A', subtitle: 'All five flavors in one case', tags: ['bundle', 'best-seller'], rating: 4.9, reviews: 1204, type: 'Bundle',
     desc: 'Twelve cans across all five flavors. The easiest way to find a favorite, or to avoid picking one.',
     images: ['pack-mixed-case.png', 'flatlay-mixed.jpg'], packs: PACKS },
-  { handle: 'tangelo-glass', legacyHandles: ['zestra-glass', 'pith-glass'], title: 'Can Glass', short: 'Glass', color: '#C9E8FF', subtitle: '16 oz, recycled glass', tags: ['merch'], rating: 4.6, reviews: 48, type: 'Merch',
+  { handle: 'tank-glass', legacyHandles: ['zestra-glass', 'pith-glass', 'tangelo-glass'], title: 'Can Glass', short: 'Glass', color: '#C9E8FF', subtitle: '16 oz, recycled glass', tags: ['merch'], rating: 4.6, reviews: 48, type: 'Merch',
     desc: 'A can-shaped glass made from recycled glass. Holds a whole can, a slice and plenty of ice.',
     images: ['glass.png'], packs: [{ name: 'Default Title', price: PRICES.glass }] },
   { handle: 'can-cooler', title: 'Can Cooler', short: 'Cooler', color: '#9B0E3F', subtitle: 'Neoprene, fits a 12 oz can', tags: ['merch'], rating: 4.7, reviews: 96, type: 'Merch',
@@ -280,8 +280,8 @@ const COLLECTIONS = [
 ];
 
 const PAGES = [
-  { handle: 'about', title: 'Our story', templateSuffix: 'about', body: '<p>Tangelo started in a shared kitchen in 2021.</p>' },
-  { handle: 'contact', title: 'Contact', templateSuffix: 'contact', keepBody: true, body: '<p>Questions about an order, wholesale or stocking Tangelo? Write to us and a real person will reply within a business day.</p>' },
+  { handle: 'about', title: 'Our story', templateSuffix: 'about', body: '<p>Tank started in a shared kitchen in 2021.</p>' },
+  { handle: 'contact', title: 'Contact', templateSuffix: 'contact', keepBody: true, body: '<p>Questions about an order, wholesale or stocking Tank? Write to us and a real person will reply within a business day.</p>' },
   { handle: 'where-to-buy', title: 'Where to buy', templateSuffix: 'stockists', body: '' },
   { handle: 'shipping', title: 'Shipping', templateSuffix: null,
     body: `<p>We ship in 2 to 4 business days. Full cases ship free; smaller orders are a flat ${PRICES.flatShipping}.</p><h2>Damaged cans</h2><p>If anything arrives dented or leaking, send us a photo within 14 days and we\'ll replace it.</p><h2>Subscriptions</h2><p>Subscriptions ship on the same day each cycle. You can skip, swap or cancel from your account up to two days before.</p>` },
@@ -364,7 +364,7 @@ function ensureProducts(files, publicationId) {
                 id: found.id,
                 handle: p.handle,
                 redirectNewHandle: true,
-                vendor: 'Tangelo',
+                vendor: 'Tank',
                 descriptionHtml: `<p>${p.desc}</p>`,
                 templateSuffix: templateFor(p),
                 metafields: [
@@ -398,7 +398,7 @@ function ensureProducts(files, publicationId) {
       title: p.title,
       handle: p.handle,
       descriptionHtml: `<p>${p.desc}</p>`,
-      vendor: 'Tangelo',
+      vendor: 'Tank',
       productType: p.type,
       templateSuffix: templateFor(p),
       tags: p.tags,

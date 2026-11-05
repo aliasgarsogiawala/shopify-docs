@@ -5,7 +5,6 @@ Copy for the preset's listing form in the Partner Dashboard (Themes, then Tank, 
 ## Demo store
 
 - URL: https://tangelo-demo-0e5pc4tq.myshopify.com
-- Tangelo is the made-up soda brand on the demo store, so it appears on the cans and in the demo copy. The theme is called Tank.
 - Password: the storefront password from Online Store, then Preferences. It isn't written here because this repository is public.
 
 ## Tagline
