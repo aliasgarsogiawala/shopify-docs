@@ -9,9 +9,9 @@ Copy for the preset's listing form in the Partner Dashboard (Themes, then Tank, 
 
 ## Tagline
 
-67 of 70 characters:
+66 of 70 characters:
 
-> Made for drink brands that sell by the flavor, the can and the case
+> Bold color and giant type for drink brands that refuse to blend in
 
 ## Industry and catalog size
 
