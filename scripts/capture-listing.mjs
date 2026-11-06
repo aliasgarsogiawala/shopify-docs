@@ -54,11 +54,25 @@ try {
   await shot('mobile-home');
 
   // Key highlights at 1600x1200.
-  await view(1600, 1200, 1, false); await go('/', 3000); await ready(); await sleep(1500);
+  // The hero highlight shows another flavor, so it doesn't repeat the desktop screenshot.
+  await view(1600, 1200, 1, false); await go('/', 3000); await ready();
+  await evaluate(`document.querySelector('tank-hero').go(4, true)`); await sleep(2500); await ready(); await sleep(1000);
   await shot('highlight-hero');
   console.log(await scrollTo('.section-pack-builder')); await sleep(1500); await ready();
   // Fill part of the case so the builder is shown in use.
   console.log(await evaluate(`(() => { const add = [...document.querySelectorAll('.section-pack-builder [data-pack-step="1"]')]; [0,0,0,1,1,2,2,3,4].forEach((i) => add[i] && add[i].click()); return add.length; })()`));
+  // Pad the section so it fills the frame below the sticky header and the next section stays out of shot.
+  console.log(await evaluate(`(() => {
+    const pack = document.querySelector('.section-pack-builder .pack');
+    const cs = getComputedStyle(pack);
+    const content = pack.getBoundingClientRect().height - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    const head = document.elementFromPoint(innerWidth / 2, 5).closest('.shopify-section');
+    const top = head ? head.getBoundingClientRect().bottom : 0;
+    const pad = Math.max((innerHeight - top - content) / 2, 0);
+    pack.style.paddingTop = pack.style.paddingBottom = pad + 'px';
+    window.scrollTo(0, pack.getBoundingClientRect().top + scrollY - top);
+    return [top, content, pad];
+  })()`));
   await sleep(1500);
   await shot('highlight-pack');
   console.log(await scrollTo('.section-scroll-story')); await sleep(1500);

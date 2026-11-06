@@ -32,12 +32,15 @@ Images are 1600 x 1200. Titles are 30 characters at most and descriptions 140.
 1. `highlight-hero.png`
    - Title: Flavor-by-flavor hero
    - Description: Every flavor gets its own slide, color and can, so shoppers can flip through the whole range before they scroll.
+   - Alt text: Tank home page hero on the Wild Blueberry slide: a blueberry can over the flavor name in white on blue, with the flavor switcher
 2. `highlight-pack.png`
    - Title: Build-your-own case
    - Description: Shoppers fill a 6, 12 or 24-can case one flavor at a time and add the whole mix to the cart in one tap.
+   - Alt text: Build your case section with 9 of 12 cans picked: a grid of colored cans beside a list of five flavors with quantity steppers
 3. `highlight-story.png`
    - Title: Grove-to-can storytelling
    - Description: Pinned, scrolling chapters walk shoppers from ingredient to finished can, each with its own photo and color.
+   - Alt text: Scrolling story chapter one, Picked at full blush: a gloved hand picking a blood orange, beside the chapter text on orange
 
 ## Metadata description
 
