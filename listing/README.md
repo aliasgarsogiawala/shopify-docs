@@ -79,9 +79,15 @@ Left out on purpose: the theme has no quick view popup, quantity pricing, pre-or
 
 ## Theme review notes
 
-Add a line about your own experience building themes, then:
+The form asks two questions.
 
-> Tank is built for drink and snack brands that sell a small range by flavor, by the can and by the case. Each flavor carries its own color through the hero, product page and cards, so a small catalog feels big. The case builder and subscriptions raise order value, and nutrition panels answer the questions these shoppers ask before they buy.
+What makes your theme unique from others?
+
+> Tank is built for one kind of merchant: drink and snack brands that sell a small range by flavor, by the can and by the case. Each flavor gets its own color, which carries through the home page hero, product page, cards and cart, so a five-product catalog feels like a full shelf. It has selling tools made for this segment: a build-your-own case that fills a 6, 12 or 24-can mix and adds it to the cart in one tap, a subscribe-and-save section, nutrition-label panels, a flavor finder quiz, a stockist locator and an age verifier. A pinned scrolling story and recipe pages let brands tell their grove-to-can story without an app.
+
+What's your past experience with developing themes?
+
+> Tank is my first Theme Store submission, built under my partner organization, Techtics. It's an Online Store 2.0 theme built with sections and blocks, so merchants can rearrange pages in the theme editor. Before submitting, I tested it against the Theme Store requirements: Theme Check passes with no errors, pages were checked at 80 screen size and page combinations and in all 9 included languages, Lighthouse accessibility scores 100 on the home, collection and product pages, and the demo store was tested end to end with the test payment gateway. I'll handle support through techtics.in/tank/support and keep the theme updated as Shopify releases new features.
 
 ## Refreshing the images
 
