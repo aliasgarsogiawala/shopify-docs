@@ -87,7 +87,7 @@ What makes your theme unique from others?
 
 What's your past experience with developing themes?
 
-> Tank is my first Theme Store submission, built under my partner organization, Techtics. It's an Online Store 2.0 theme built with sections and blocks, so merchants can rearrange pages in the theme editor. Before submitting, I tested it against the Theme Store requirements: Theme Check passes with no errors, pages were checked at 80 screen size and page combinations and in all 9 included languages, Lighthouse accessibility scores 100 on the home, collection and product pages, and the demo store was tested end to end with the test payment gateway. I'll handle support through techtics.in/tank/support and keep the theme updated as Shopify releases new features.
+> At Techtics, we've built websites for clients, and Tank is our first Shopify Theme Store submission. We built it as an Online Store 2.0 theme with sections and blocks, so merchants can rearrange pages in the theme editor. Before submitting, we tested it against the Theme Store requirements: Theme Check passes with no errors, pages were checked at 80 screen size and page combinations and in all 9 included languages, Lighthouse accessibility scores 100 on the home, collection and product pages, and the demo store was tested end to end with the test payment gateway. We'll handle support through techtics.in/tank/support and keep the theme updated as Shopify releases new features.
 
 ## Refreshing the images
 
