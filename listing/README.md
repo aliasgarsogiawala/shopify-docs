@@ -52,16 +52,21 @@ Choose from $100 to $500 USD, in steps of $10. Suggested: $300.
 
 ## Features
 
-Tick only these. Each one is in the theme without extra code:
+Tick only these, in the order the form lists them. Each one is in the theme without extra code:
 
-- Image display: high resolution images, image galleries, image hotspot, image zoom, slideshow
-- Product details: color swatches, ingredients/nutritional information, product options, product videos, shipping/delivery information
+- Cart and checkout optimization: cart notes, in-store pickups, quick buy, slide-out cart, sticky cart
+- Conversion optimization: cross-selling, recently viewed, recommended products, stock counter
+- Promotional content: blogs, countdown timer, in-menu promos, product badges, promo banners, promo tiles
+- Trust and social proof: age verifier, FAQ page
+- Selling internationally: EU translations (the theme ships English, French, Italian, German and Spanish)
+- Image display: high-resolution images, image galleries, image hotspot, image rollover, image zoom, slideshow
+- Product details: color swatches, ingredients or nutritional information, product options, product videos, shipping/delivery information
 - Visual effects: animation
-- Conversion optimization: cross-selling (complete the look), recently viewed, recommended products, stock counter, store locator
-- Promotional content: blogs, in-menu promos, product badges, promo banners, promo tiles
-- Trust/social proof: age verifier, FAQ page, product reviews
-- Carts and checkout: cart notes, in-store pickups, quick buy, slide-out cart, sticky cart
-- Navigation and filtering: enhanced search, mega menu, product filtering and sorting, sticky header
+- Navigation and filtering: enhanced search, mega menu, product filtering and sorting, sticky header, swatch filters
+- Product highlights: recently viewed, recommended products
+- Customer accounts and sign-in: account menu
+
+Left out on purpose: the theme has no quick view popup, quantity pricing, pre-order, gift wrapping, Sign in with Shop button (the footer has Follow on Shop), product tabs (it uses accordions), infinite scroll (it uses numbered pages), breadcrumbs, back-to-top button, right-to-left styles, popups or press logos.
 
 ## Merchant support
 
